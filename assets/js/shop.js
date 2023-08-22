@@ -6,7 +6,7 @@ const seeMore = document.getElementById("seeMore")
 
 let productList = document.querySelector('.product-list')
 const fetchData = async () => {
-    const fetchDatas = await fetch("http://127.0.0.1:5500/assets/json/products.json",{
+    const fetchDatas = await fetch("https://adarog999.github.io/MP2/assets/json/products.json",{
         credentials: 'omit',
     })
     const response =   await fetchDatas.json()

@@ -24,7 +24,7 @@ let variantsChoice = [];
 // console.log(variantsChoice)
 
 
-fetch("http://127.0.0.1:5500/assets/json/products.json")
+fetch("https://adarog999.github.io/MP2/assets/json/products.json")
 .then( res => res.json())
 .then(data => {
     // console.log(data);

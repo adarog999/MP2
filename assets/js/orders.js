@@ -4,7 +4,7 @@ console.log(orderList)
 
 
 const displayOrders =  () => {
-    fetch("http://127.0.0.1:5500/assets/json/products.json")
+    fetch("https://adarog999.github.io/MP2/assets/json/products.json")
     .then(res => res.json())
     .then(data => {
         let allProducts = [];
