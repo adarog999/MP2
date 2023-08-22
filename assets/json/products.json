@@ -2,10 +2,10 @@
     "tshirt": [
         {
             "id": 0,
-            "image": "../assets/images/products-images/TCSW-wolf/TCSW-wolf1.jpg",
+            "image": "./assets/images/products-images/TCSW-wolf/TCSW-wolf1.jpg",
             "title": "TCSW Wolf",
             "price": 600,
-            "images": ["../assets/images/products-images/TCSW-wolf/TCSW-wolf2.jpg","../assets/images/products-images/TCSW-wolf/TCSW-wolf3.jpg","../assets/images/products-images/TCSW-wolf/TCSW-wolf4.jpg"],
+            "images": ["./assets/images/products-images/TCSW-wolf/TCSW-wolf2.jpg","./assets/images/products-images/TCSW-wolf/TCSW-wolf3.jpg","./assets/images/products-images/TCSW-wolf/TCSW-wolf4.jpg"],
             "available": "true",
             "quantity": 50,
             "variants": [{
@@ -16,10 +16,10 @@
         },
         {
             "id": 1,
-            "image": "../assets/images/products-images/TCSW-summer/TCSW-summer1.jpg",
+            "image": "./assets/images/products-images/TCSW-summer/TCSW-summer1.jpg",
             "title": "TCSW Summer",
             "price": 600,
-            "images": ["../assets/images/products-images/TCSW-summer/TCSW-summer1.jpg","../assets/images/products-images/TCSW-summer/TCSW-summer2.jpg"],
+            "images": ["./assets/images/products-images/TCSW-summer/TCSW-summer1.jpg","./assets/images/products-images/TCSW-summer/TCSW-summer2.jpg"],
             "available": "true",
             "quantity": 20,
             "variants": [{
@@ -30,10 +30,10 @@
         },
         {
             "id": 2,
-            "image": "../assets/images/products-images/TCSW-darkdays/TCSW-tiedye3.jpg",
+            "image": "./assets/images/products-images/TCSW-darkdays/TCSW-tiedye3.jpg",
             "title": "TCSW Dark Days",
             "price": 750,
-            "images": ["../assets/images/products-images/TCSW-darkdays/TCSW-tiedye1.jpg","../assets/images/products-images/TCSW-darkdays/TCSW-tiedye2.jpg","../assets/images/products-images/TCSW-darkdays/TCSW-tiedye4.jpg"],
+            "images": ["./assets/images/products-images/TCSW-darkdays/TCSW-tiedye1.jpg","./assets/images/products-images/TCSW-darkdays/TCSW-tiedye2.jpg","./assets/images/products-images/TCSW-darkdays/TCSW-tiedye4.jpg"],
             "available": "true",
             "quantity": 30,
             "variants": [{
@@ -44,10 +44,10 @@
         },
         {
             "id": 3,
-            "image": "../assets/images/products-images/NIKE-jordan/NIKE-jordanW1.jpg",
+            "image": "./assets/images/products-images/NIKE-jordan/NIKE-jordanW1.jpg",
             "title": "NIKE Jordan Shirt",
             "price": 350,
-            "images": ["../assets/images/products-images/NIKE-jordan/NIKE-jordanW2.jpg","../assets/images/products-images/NIKE-jordan/NIKE-jordanB1.jpg","../assets/images/products-images/NIKE-jordan/NIKE-jordanB2.jpg"],
+            "images": ["./assets/images/products-images/NIKE-jordan/NIKE-jordanW2.jpg","./assets/images/products-images/NIKE-jordan/NIKE-jordanB1.jpg","./assets/images/products-images/NIKE-jordan/NIKE-jordanB2.jpg"],
             "available": "true",
             "quantity": 20,
             "variants": [{
@@ -58,10 +58,10 @@
         },
         {
             "id": 4,
-            "image": "../assets/images/products-images/VANS-love/VANS-lovekind1.png",
+            "image": "./assets/images/products-images/VANS-love/VANS-lovekind1.png",
             "title": "VANS Love Shirt",
             "price": 900,
-            "images": ["../assets/images/products-images/VANS-love/VANS-lovekind2.png","../assets/images/products-images/VANS-love/VANS-lovekind3.png","../assets/images/products-images/VANS-love/VANS-lovekind4.png"],
+            "images": ["./assets/images/products-images/VANS-love/VANS-lovekind2.png","./assets/images/products-images/VANS-love/VANS-lovekind3.png","./assets/images/products-images/VANS-love/VANS-lovekind4.png"],
             "available": "true",
             "quantity": 50,
             "variants": [{
@@ -72,10 +72,10 @@
         },
         {
             "id": 5,
-            "image": "../assets/images/products-images/VANS-green/VANS-green1.jpg",
+            "image": "./assets/images/products-images/VANS-green/VANS-green1.jpg",
             "title": "VANS Green Shirt",
             "price": 850,
-            "images": ["../assets/images/products-images/VANS-green/VANS-green1.jpg","../assets/images/products-images/VANS-green/VANS-green2.jpg"],
+            "images": ["./assets/images/products-images/VANS-green/VANS-green1.jpg","./assets/images/products-images/VANS-green/VANS-green2.jpg"],
             "available": "true",
             "quantity": 50,
             "variants": [{
@@ -86,10 +86,10 @@
         },
         {
             "id": 6,
-            "image": "../assets/images/products-images/VANS-original/VANS-original1.jpg",
+            "image": "./assets/images/products-images/VANS-original/VANS-original1.jpg",
             "title": "VANS The Original Shirt",
             "price": 875,
-            "images": ["../assets/images/products-images/VANS-original/VANS-original1.jpg","../assets/images/products-images/VANS-original/VANS-original2.jpg","../assets/images/products-images/VANS-original/VANS-original3.jpg"],
+            "images": ["./assets/images/products-images/VANS-original/VANS-original1.jpg","./assets/images/products-images/VANS-original/VANS-original2.jpg","./assets/images/products-images/VANS-original/VANS-original3.jpg"],
             "available": "true",
             "quantity": 15,
             "variants": [{
@@ -100,10 +100,10 @@
         },
         {
             "id": 7,
-            "image": "../assets/images/products-images/VANS-pink/VANS-pink1.jpg",
+            "image": "./assets/images/products-images/VANS-pink/VANS-pink1.jpg",
             "title": "VANS Pink Shirt",
             "price": 650,
-            "images": ["../assets/images/products-images/VANS-pink/VANS-pink2.jpg","../assets/images/products-images/VANS-pink/VANS-pink3.jpg","../assets/images/products-images/VANS-pink/VANS-pink4.jpg"],
+            "images": ["./assets/images/products-images/VANS-pink/VANS-pink2.jpg","./assets/images/products-images/VANS-pink/VANS-pink3.jpg","./assets/images/products-images/VANS-pink/VANS-pink4.jpg"],
             "available": "true",
             "quantity": 30,
             "variants": [{
@@ -114,10 +114,10 @@
         },
         {
             "id": 8,
-            "image": "../assets/images/products-images/SUPREME-orange/SUPREME-orange1.jpg",
+            "image": "./assets/images/products-images/SUPREME-orange/SUPREME-orange1.jpg",
             "title": "SUPREME Orange Shirt",
             "price": 123,
-            "images": ["../assets/images/products-images/SUPREME-orange/SUPREME-orange1.jpg","../assets/images/products-images/SUPREME-orange/SUPREME-orange2.jpg","../assets/images/products-images/SUPREME-orange/SUPREME-orange3.jpg"],
+            "images": ["./assets/images/products-images/SUPREME-orange/SUPREME-orange1.jpg","./assets/images/products-images/SUPREME-orange/SUPREME-orange2.jpg","./assets/images/products-images/SUPREME-orange/SUPREME-orange3.jpg"],
             "available": "true",
             "quantity": 25,
             "variants": [{
@@ -128,10 +128,10 @@
         },
         {
             "id": 9,
-            "image": "../assets/images/products-images/SUPREME-white/SUPREME-white1.jpg",
+            "image": "./assets/images/products-images/SUPREME-white/SUPREME-white1.jpg",
             "title": "SUPREME White Shirt",
             "price": 1200,
-            "images": ["../assets/images/products-images/SUPREME-white/SUPREME-white1.jpg","../assets/images/products-images/SUPREME-white/SUPREME-white2.jpg","../assets/images/products-images/SUPREME-white/SUPREME-white3.jpg"],
+            "images": ["./assets/images/products-images/SUPREME-white/SUPREME-white1.jpg","./assets/images/products-images/SUPREME-white/SUPREME-white2.jpg","./assets/images/products-images/SUPREME-white/SUPREME-white3.jpg"],
             "available": "true",
             "quantity": 30,
             "variants": [{
@@ -144,10 +144,10 @@
     "shoes": [
         {
             "id": 10,
-            "image": "../assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft1.jpg",
+            "image": "./assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft1.jpg",
             "title": "Adidas Future Craft",
             "price": 1200,
-            "images": ["../assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft2.jpg","../assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft3.jpg","../assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft4.jpg"],
+            "images": ["./assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft2.jpg","./assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft3.jpg","./assets/images/products-images/ADIDAS-futurecraft/ADIDAS-4dfuturecraft4.jpg"],
             "available": "true",
             "quantity": 25,
             "variants": [{
@@ -158,10 +158,10 @@
         },
         {
             "id": 11,
-            "image": "../assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost1.jpg",
+            "image": "./assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost1.jpg",
             "title": "Adidas Ultra Boost",
             "price": 1050,
-            "images": ["../assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost2.jpg","../assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost3.jpg","../assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost4.jpg"],
+            "images": ["./assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost2.jpg","./assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost3.jpg","./assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost4.jpg"],
             "available": "true",
             "quantity": 15,
             "variants": [{
@@ -172,10 +172,10 @@
         },
         {
             "id": 12,
-            "image": "../assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack1.jpg",
+            "image": "./assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack1.jpg",
             "title": "Nike Airforce1 Cactus Jack",
             "price": 2100,
-            "images": ["../assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack2.jpg","../assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack3.jpg","../assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack4.jpg"],
+            "images": ["./assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack2.jpg","./assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack3.jpg","./assets/images/products-images/NIKE-airforce1/NIKE-airforcecactusjack4.jpg"],
             "available": "true",
             "quantity": 30,
             "variants": [{
@@ -184,10 +184,10 @@
         },
         {
             "id": 13,
-            "image": "../assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh1.jpg",
+            "image": "./assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh1.jpg",
             "title": "Nike Jordan1 Travis Scott High Mocha",
             "price": 3500,
-            "images": ["../assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh1.jpg","../assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh2.jpg","../assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh3.jpg"],
+            "images": ["./assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh1.jpg","./assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh2.jpg","./assets/images/products-images/NIKE-j1high/NIKE-j1travisscotthigh3.jpg"],
             "available": "true",
             "quantity": 10,
             "variants": [{
@@ -198,10 +198,10 @@
         },
         {
             "id": 14,
-            "image": "../assets/images/products-images/NIKE-j6high/NIKE-j6high1.jpg",
+            "image": "./assets/images/products-images/NIKE-j6high/NIKE-j6high1.jpg",
             "title": "Nike Jordan6 High",
             "price": 2500,
-            "images": ["../assets/images/products-images/NIKE-j6high/NIKE-j6high2.jpg","../assets/images/products-images/NIKE-j6high/NIKE-j6high3.jpg","../assets/images/products-images/NIKE-j6high/NIKE-j6high4.jpg","../assets/images/products-images/NIKE-j6high/NIKE-j6high5.jpg"],
+            "images": ["./assets/images/products-images/NIKE-j6high/NIKE-j6high2.jpg","./assets/images/products-images/NIKE-j6high/NIKE-j6high3.jpg","./assets/images/products-images/NIKE-j6high/NIKE-j6high4.jpg","./assets/images/products-images/NIKE-j6high/NIKE-j6high5.jpg"],
             "available": "true",
             "quantity": 20,
             "variants": [{
@@ -212,10 +212,10 @@
         },
         {
             "id": 15,
-            "image": "../assets/images/products-images/NIKE-offwhite/NIKE-offwhite1.jpg",
+            "image": "./assets/images/products-images/NIKE-offwhite/NIKE-offwhite1.jpg",
             "title": "Nike Jordan1 Off White",
             "price": 2400,
-            "images": ["../assets/images/products-images/NIKE-offwhite/NIKE-offwhite2.jpg","../assets/images/products-images/NIKE-offwhite/NIKE-offwhite3.jpg","../assets/images/products-images/NIKE-offwhite/NIKE-offwhite4.jpg","../assets/images/products-images/NIKE-offwhite/NIKE-offwhite5.jpg"],
+            "images": ["./assets/images/products-images/NIKE-offwhite/NIKE-offwhite2.jpg","./assets/images/products-images/NIKE-offwhite/NIKE-offwhite3.jpg","./assets/images/products-images/NIKE-offwhite/NIKE-offwhite4.jpg","./assets/images/products-images/NIKE-offwhite/NIKE-offwhite5.jpg"],
             "available": "false",
             "quantity": 0,
             "variants": [{
@@ -226,10 +226,10 @@
         },
         {
             "id": 16,
-            "image": "../assets/images/products-images/NIKE-sacai/NIKE-sacai1.jpg",
+            "image": "./assets/images/products-images/NIKE-sacai/NIKE-sacai1.jpg",
             "title": "Nike Sacai",
             "price": 650,
-            "images": ["../assets/images/products-images/NIKE-sacai/NIKE-sacai2.jpg","../assets/images/products-images/NIKE-sacai/NIKE-sacai4.jpg","../assets/images/products-images/NIKE-sacai/NIKE-sacai5.jpg","../assets/images/products-images/NIKE-sacai/NIKE-sacai6.jpg","../assets/images/products-images/NIKE-sacai/NIKE-sacai7.jpg"],
+            "images": ["./assets/images/products-images/NIKE-sacai/NIKE-sacai2.jpg","./assets/images/products-images/NIKE-sacai/NIKE-sacai4.jpg","./assets/images/products-images/NIKE-sacai/NIKE-sacai5.jpg","./assets/images/products-images/NIKE-sacai/NIKE-sacai6.jpg","./assets/images/products-images/NIKE-sacai/NIKE-sacai7.jpg"],
             "available": "true",
             "quantity": 10,
             "variants": [{
@@ -240,10 +240,10 @@
         },
         {
             "id": 17,
-            "image": "../assets/images/products-images/NIKE-unla/NIKE-unla1.jpg",
+            "image": "./assets/images/products-images/NIKE-unla/NIKE-unla1.jpg",
             "title": "Jordan 1 Retro High Union Los Angeles Black Toe",
             "price": 1500,
-            "images": ["../assets/images/products-images/NIKE-unla/NIKE-unla2.jpg","../assets/images/products-images/NIKE-unla/NIKE-unla3.jpg","../assets/images/products-images/NIKE-unla/NIKE-unla4.jpg","../assets/images/products-images/NIKE-unla/NIKE-unla5.jpg","../assets/images/products-images/NIKE-unla/NIKE-unla6.jpg","../assets/images/products-images/NIKE-unla/NIKE-unla7.jpg"],
+            "images": ["./assets/images/products-images/NIKE-unla/NIKE-unla2.jpg","./assets/images/products-images/NIKE-unla/NIKE-unla3.jpg","./assets/images/products-images/NIKE-unla/NIKE-unla4.jpg","./assets/images/products-images/NIKE-unla/NIKE-unla5.jpg","./assets/images/products-images/NIKE-unla/NIKE-unla6.jpg","./assets/images/products-images/NIKE-unla/NIKE-unla7.jpg"],
             "available": "true",
             "quantity": 10,
             "variants": [{
@@ -254,10 +254,10 @@
         },
         {
             "id": 18,
-            "image": "../assets/images/products-images/VANS-atwood/VANS-atwood1.jpg",
+            "image": "./assets/images/products-images/VANS-atwood/VANS-atwood1.jpg",
             "title": "",
             "price": 350,
-            "images": "['../assets/images/products-images/VANS-atwood/VANS-atwood2.jpg','../assets/images/products-images/VANS-atwood/VANS-atwood3.jpg','../assets/images/products-images/VANS-atwood/VANS-atwood4.jpg','../assets/images/products-images/VANS-atwood/VANS-atwood5.jpg']",
+            "images": "['./assets/images/products-images/VANS-atwood/VANS-atwood2.jpg','./assets/images/products-images/VANS-atwood/VANS-atwood3.jpg','./assets/images/products-images/VANS-atwood/VANS-atwood4.jpg','./assets/images/products-images/VANS-atwood/VANS-atwood5.jpg']",
             "available": "true",
             "quantity": 10,
             "variants": [{
@@ -268,10 +268,10 @@
         },
         {
             "id": 19,
-            "image": "../assets/images/products-images/VANS-vaultog/VANS-vaultog1.jpg",
+            "image": "./assets/images/products-images/VANS-vaultog/VANS-vaultog1.jpg",
             "title": "Vans Vault OG",
             "price": 400,
-            "images": ["../assets/images/products-images/VANS-vaultog/VANS-vaultog2.jpg","../assets/images/products-images/VANS-vaultog/VANS-vaultog3.jpg","../assets/images/products-images/VANS-vaultog/VANS-vaultog4.jpg"],
+            "images": ["./assets/images/products-images/VANS-vaultog/VANS-vaultog2.jpg","./assets/images/products-images/VANS-vaultog/VANS-vaultog3.jpg","./assets/images/products-images/VANS-vaultog/VANS-vaultog4.jpg"],
             "available": false,
             "quantity": 0,
             "variants": [{
@@ -284,7 +284,7 @@
     "appliance": [
         {
             "id": 20,
-            "image": "../assets/images/products-images/COFFEE-maker/COFFEE-maker.jpg",
+            "image": "./assets/images/products-images/COFFEE-maker/COFFEE-maker.jpg",
             "title": "Coffee Maker",
             "price": 400,
             "images": [],
@@ -296,7 +296,7 @@
         },
         {
             "id": 21,
-            "image": "../assets/images/products-images/ELECTRIC-fan/ELECTRIC-fan.jpg",
+            "image": "./assets/images/products-images/ELECTRIC-fan/ELECTRIC-fan.jpg",
             "title": "Electric fan",
             "price": 250,
             "images": [],
@@ -308,7 +308,7 @@
         },
         {
             "id": 22,
-            "image": "../assets/images/products-images/KITCHEN-exhaust/KITCHEN-exhaust.jpg",
+            "image": "./assets/images/products-images/KITCHEN-exhaust/KITCHEN-exhaust.jpg",
             "title": "Kitchen Exhaust",
             "price": 450,
             "images": [],
@@ -320,10 +320,10 @@
         },
         {
             "id": 23,
-            "image": "../assets/images/products-images/PANASONIC-refrigerator/PANASONIC-refrigerator1.jpg",
+            "image": "./assets/images/products-images/PANASONIC-refrigerator/PANASONIC-refrigerator1.jpg",
             "title": "Panasonic Refrigerator - Inverter",
             "price": 1200,
-            "images": "['../assets/images/products-images/PANASONIC-refrigerator/PANASONIC-refrigerator2.jpg','../assets/images/products-images/PANASONIC-refrigerator/PANASONIC-refrigerator3.jpg']",
+            "images": "['./assets/images/products-images/PANASONIC-refrigerator/PANASONIC-refrigerator2.jpg','./assets/images/products-images/PANASONIC-refrigerator/PANASONIC-refrigerator3.jpg']",
             "available": "true",
             "quantity": 5,
             "variants": [{
@@ -332,7 +332,7 @@
         },
         {
             "id": 24,
-            "image": "../assets/images/products-images/SAMSUNG-airconditioner/SAMSUNG-aircon.jpg",
+            "image": "./assets/images/products-images/SAMSUNG-airconditioner/SAMSUNG-aircon.jpg",
             "title": "Samsung Airconditioner",
             "price": 1200,
             "images": [],
@@ -344,7 +344,7 @@
         },
         {
             "id": 25,
-            "image": "../assets/images/products-images/SAMSUNG-tv/SAMSUNG-tv.jpg",
+            "image": "./assets/images/products-images/SAMSUNG-tv/SAMSUNG-tv.jpg",
             "title": "Samsung Flat Screen TV",
             "price": 450,
             "images": [],
@@ -356,7 +356,7 @@
         },
         {
             "id": 26,
-            "image": "../assets/images/products-images/SAMSUNG-washingmachine/SAMSUNG-washingmachine.jpg",
+            "image": "./assets/images/products-images/SAMSUNG-washingmachine/SAMSUNG-washingmachine.jpg",
             "title": "Samsung Washing Machine",
             "price": 650,
             "images": [],
@@ -368,7 +368,7 @@
         },
         {
             "id": 27,
-            "image": "../assets/images/products-images/STOVE/STOVE.jpeg",
+            "image": "./assets/images/products-images/STOVE/STOVE.jpeg",
             "title": "American Stove",
             "price": 700,
             "images": [],
@@ -380,7 +380,7 @@
         },
         {
             "id": 28,
-            "image": "../assets/images/products-images/VACUUM-cleaner/VACUUM-cleaner1.jpeg",
+            "image": "./assets/images/products-images/VACUUM-cleaner/VACUUM-cleaner1.jpeg",
             "title": "Vacuum Cleaner",
             "price": 250,
             "images": "['../assets/images/products-images/VACUUM-cleaner/VACUUM-cleaner2.jpeg']",
