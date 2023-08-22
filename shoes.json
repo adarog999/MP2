@@ -1,0 +1,144 @@
+{
+    "shoes": [
+        {
+            "id": 10,
+            "image": "../images/products-shoes/ADIDAS-futurecraft/ADIDAS-4dfuturecraft1.jpg",
+            "title": "Adidas Future Craft",
+            "price": 1200,
+            "images": "['../images/products-shoes/ADIDAS-futurecraft/ADIDAS-4dfuturecraft2.jpg','../images/products-shoes/ADIDAS-futurecraft/ADIDAS-4dfuturecraft3.jpg','../images/products-shoes/ADIDAS-futurecraft/ADIDAS-4dfuturecraft4.jpg']",
+            "available": "true",
+            "quantity": 25,
+            "variants": [{
+                "colors": "black"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 11,
+            "image": "../images/products-shoes/ADIDAS-ultraboost/ADIDAS-ultraboost1.jpg",
+            "title": "Adidas Ultra Boost",
+            "price": 1050,
+            "images": "['../images/products-shoes/ADIDAS-ultraboost/ADIDAS-ultraboost2.jpg','../images/products-shoes/ADIDAS-ultraboost/ADIDAS-ultraboost3.jpg','../images/products-shoes/ADIDAS-ultraboost/ADIDAS-ultraboost4.jpg']",
+            "available": "true",
+            "quantity": 15,
+            "variants": [{
+                "colors": "black"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 12,
+            "image": "../images/products-shoes/NIKE-airforce1/NIKE-airforcecactusjack1.jpg",
+            "title": "Nike Airforce1 Cactus Jack",
+            "price": 2100,
+            "images": "['../images/products-shoes/NIKE-airforce1/NIKE-airforcecactusjack2.jpg','../images/products-shoes/NIKE-airforce1/NIKE-airforcecactusjack3.jpg','../images/products-shoes/NIKE-airforce1/NIKE-airforcecactusjack4.jpg']",
+            "available": "true",
+            "quantity": 30,
+            "variants": [{
+                "colors": ""
+            },{
+                "size": ["7","8","9","10","11"]
+            }]   
+        },
+        {
+            "id": 13,
+            "image": "../images/products-shoes/NIKE-j1high/NIKE-j1travisscotthigh1.jpg",
+            "title": "Nike Jordan1 Travis Scott High Mocha",
+            "price": 3500,
+            "images": "['../images/products-shoes/NIKE-j1high/NIKE-j1travisscotthigh1.jpg','../images/products-shoes/NIKE-j1high/NIKE-j1travisscotthigh2.jpg','../images/products-shoes/NIKE-j1high/NIKE-j1travisscotthigh3.jpg']",
+            "available": "true",
+            "quantity": 10,
+            "variants": [{
+                "colors": "Mocha"
+            },{
+                "size": ["7","8","9","10","11"]
+            }]   
+        },
+        {
+            "id": 14,
+            "image": "../images/products-shoes/NIKE-j6high/NIKE-j6high1.jpg",
+            "title": "Nike Jordan6 High",
+            "price": 2500,
+            "images": "['../images/products-shoes/NIKE-j6high/NIKE-j6high2.jpg','../images/products-shoes/NIKE-j6high/NIKE-j6high3.jpg','../images/products-shoes/NIKE-j6high/NIKE-j6high4.jpg','../images/products-shoes/NIKE-j6high/NIKE-j6high5.jpg']",
+            "available": "true",
+            "quantity": 20,
+            "variants": [{
+                "colors": "dark green"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 15,
+            "image": "../images/products-shoes/NIKE-offwhite/NIKE-offwhite1.jpg",
+            "title": "Nike Jordan1 Off White",
+            "price": 2400,
+            "images": "['../images/products-shoes/NIKE-offwhite/NIKE-offwhite2.jpg','../images/products-shoes/NIKE-offwhite/NIKE-offwhite3.jpg','../images/products-shoes/NIKE-offwhite/NIKE-offwhite4.jpg','../images/products-shoes/NIKE-offwhite/NIKE-offwhite5.jpg']",
+            "available": "false",
+            "quantity": 0,
+            "variants": [{
+                "colors": "white"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 16,
+            "image": "../images/products-shoes/NIKE-sacai/NIKE-sacai1.jpg",
+            "title": "Nike Sacai",
+            "price": 650,
+            "images": "['../images/products-shoes/NIKE-sacai/NIKE-sacai2.jpg','../images/products-shoes/NIKE-sacai/NIKE-sacai3.jpg','../images/products-shoes/NIKE-sacai/NIKE-sacai4.jpg','../images/products-shoes/NIKE-sacai/NIKE-sacai5.jpg','../images/products-shoes/NIKE-sacai/NIKE-sacai6.jpg','../images/products-shoes/NIKE-sacai/NIKE-sacai7.jpg']",
+            "available": "true",
+            "quantity": 10,
+            "variants": [{
+                "colors": ["green","white"]
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 17,
+            "image": "../images/products-shoes/NIKE-unla/NIKE-unla1.jpg",
+            "title": "Jordan 1 Retro High Union Los Angeles Black Toe",
+            "price": 1500,
+            "images": "['../images/products-shoes/NIKE-unla/NIKE-unla2.jpg','../images/products-shoes/NIKE-unla/NIKE-unla3.jpg','../images/products-shoes/NIKE-unla/NIKE-unla4.jpg','../images/products-shoes/NIKE-unla/NIKE-unla5.jpg','../images/products-shoes/NIKE-unla/NIKE-unla6.jpg','../images/products-shoes/NIKE-unla/NIKE-unla7.jpg']",
+            "available": "true",
+            "quantity": 10,
+            "variants": [{
+                "colors": "black"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 18,
+            "image": "../images/products-shoes/VANS-atwood/VANS-atwood1.jpg",
+            "title": "",
+            "price": 350,
+            "images": "['../images/products-shoes/VANS-atwood/VANS-atwood2.jpg','../images/products-shoes/VANS-atwood/VANS-atwood3.jpg','../images/products-shoes/VANS-atwood/VANS-atwood4.jpg','../images/products-shoes/VANS-atwood/VANS-atwood5.jpg']",
+            "available": "true",
+            "quantity": 10,
+            "variants": [{
+                "colors": "black"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        },
+        {
+            "id": 19,
+            "image": "../images/products-shoes/VANS-vaultog/VANS-vaultog1.jpg",
+            "title": "Vans Vault OG",
+            "price": 400,
+            "images": "['../images/products-shoes/VANS-vaultog/VANS-vaultog2.jpg','../images/products-shoes/VANS-vaultog/VANS-vaultog3.jpg','../images/products-shoes/VANS-vaultog/VANS-vaultog4.jpg']",
+            "available": "false",
+            "quantity": 0,
+            "variants": [{
+                "colors": "black"
+            },{
+                "size": ["7","8","9","10"]
+            }]   
+        }
+    ]
+}

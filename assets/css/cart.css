@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Titan+One&family=Work+Sans&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body {
+    background-color: #f4f4f4;
+    padding-bottom: 100px;
+    background-image: url("../images/body-bg-1.png");
+    background-size: cover;
+}
+/* NAVBAR STARTS HERE */
+
+.navSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-image: linear-gradient(to right, rgb(17,137,146), rgba(19, 122, 19, 0.733));
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.navSection h1 {
+    margin: 0;
+    font-size: 22px;
+}
+.navBrand {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    padding: 5px 5px;
+    margin: 0;
+}
+.navBrand span {
+    text-align: center;
+    font-size: 12px;
+}
+.navSection input {
+    width: 250px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(252, 250, 250, 0.295);
+}
+.navSection ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.navSection ul li {
+    list-style-type: none;
+    padding: 0 10px;
+}
+.navSection ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+.navSection ul li::after {
+    display: block;
+    content: "";
+    height: 1px;
+    background-color: orangered;
+    transform: scaleX(0);
+    transition: 0.6s ease;
+}
+.navSection ul li:hover::after {
+    transform: scaleX(1);
+}
+.search {
+    padding: 0;
+    margin: 0;
+}
+
+/* NAVBAR ENDS HERE */
+
+
+/* cart-container */
+.cart-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto 50px;
+}
+
+.container {
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+
+}
+.container .loadings {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .div-container {
+    display: flex;
+    border-top: 1px solid gray;
+    padding-top: 5px;
+}
+.container .div1 {
+    display: flex;
+}
+.container .div1 .img-wrapper {
+    width: 250px;
+    height: 200px;
+} 
+.container .div1 .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.container .div2 {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+}
+.container .div2 span {
+    display: inline-block;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    margin-left: 5px;
+}
+.container .div3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.container .div3 .div3-wrapper .chngBtn {
+    cursor: pointer;
+}
+.container .div3 span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.container .div3 .changeVariants {
+    position: absolute;
+    margin-top: 230px;
+    border: 1.5px solid #ff3d00;
+    border-radius: 10px;
+    width: 300px;
+    height: max-content;
+    padding: 10px;
+    background-color: #fff;
+    display: none;
+    z-index: 7;
+}
+
+.container .div3 .changeVariants .varieDivider {
+    margin-top: 10px;
+}
+.container .div3 .changeVariants .varieDivider span {
+    margin-bottom: 5px;
+}
+.container .div3 .changeVariants .change_btn {
+    display: flex;
+    column-gap: 5px;
+}
+.container .div3 .changeVariants button {
+    padding: 3px 15px;
+    border: 1.5px solid #ff3d00;
+    cursor: pointer;
+    color: #ff3d00;
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+.container .div3 .changeVariants button:hover {
+    background-color: #ff3d00;
+    color: #f4f4f4;
+}
+.container .div3 .changeVariants button:active {
+    border: 1px solid green;
+}
+.container .div3 .div3-wrapper {
+    padding: 10px;
+    width: 200px;
+}
+.change-varie-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #f4f4f400;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+.container .div4{
+    display: flex;
+    align-items: center;
+    width: 230px;
+    justify-content: center;
+}
+.cart-container .div4 input {
+    height: 35px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.container .div5 {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 200px;
+    justify-content: center;
+}
+.container .div5 span {
+    letter-spacing: 1.5px;
+}
+.container .div6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-left: auto;
+}
+.container .div6 button {
+    border: 2px solid #DF2E38;
+    padding: 5px 10px;
+    background-color: #fff;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #DF2E38;
+    cursor: pointer;
+}
+.container .div6 button:hover {
+    background-color: #DF2E38;
+    color: #fff;
+}
+.container .div6 button:active {
+    border: 2px solid #DF2E38;
+    color: #DF2E38;
+    background-color: #fff;
+}
+/* cart-container */
+
+
+/* cart total */
+
+.cart-total {
+    border: 1px solid black;
+    height: max-content;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+.cart-total .div {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cart-total .div div{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-total .div button {
+    background-color: #128991;
+    padding: 10px 0;
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: #fff;
+    cursor: pointer;
+}
+.cart-total .div button:hover {
+    background-color: #fff;
+    color: #102C57;
+    border: 2px solid #102C57;
+}
+.cart-total .div button:active {
+    background-color: #128991;
+    color: #fff;
+}
+/* cart total */
+
+.selected {
+    border: 1px solid red;
+}
+
+
+/* checkout */
+.checkout-container {
+    width: 100%;
+    height: 100%;
+    background-color: #3b363681;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+}
+.placeOrder-success {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    z-index: 5;
+    background-color: #3A966A;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    top: -150px;
+    animation: pl-order .3s forwards;
+    display: none;
+}
+@keyframes pl-order {
+    from{top: -150px;}
+    to{top: 0;}
+}
+.placeOrder-success i {
+    font-size: 30px;
+}
+.checkout-container .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .5;
+}
+
+.checkout-body {
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 595px;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkout-body .head {
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.783);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+.checkout-body form {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+}
+.checkout-body form .client-info {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    padding: 20px;
+    border-right: 1px solid rgba(128, 128, 128, 0.783);
+    position: relative;
+}
+.form-validation {
+    position: absolute;
+    background-color: #DF2E38;
+    top: -15px;
+    left: 20px;
+    padding: 3px 10px;
+    color: yellow;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+}
+.form-validation .message {
+    margin: 0 5px;
+    display: inline-block;
+}
+.form-validation i {
+    display: inline-block;
+   
+}
+.form-validation #close {
+    cursor: pointer;
+}
+.form-validation #close:hover {
+    color: black;
+}
+/* .client-info  */
+.client-info .names {
+    display: flex;
+    gap: 10px;
+}
+.client-info .names div {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+
+}
+.client-info .names div input {
+    height: 35px;
+}
+.client-info .contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 5px;
+}
+.client-info .contact input {
+    height: 35px;
+}
+/* .client-info  */
+
+/* address */
+.address {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    position: relative;
+}
+.loading {
+    position: absolute;
+    width: 100%;
+    background-color: #f4f4f400;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.address  .head {
+    width: 100%;
+    display: block;
+    height: max-content;
+    font-size: 20px;
+    border: none;
+}
+.address .address-option 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.address select {
+    width: max-content;
+    letter-spacing: 1.5px;
+    height: 35px;
+    margin-top: 5px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+/* address */
+
+/* payment-option */
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+.payment-option select {
+    display: flex;
+    padding: 5px;
+    height: 50px;
+    border: 1px solid gray;
+    outline: none;
+}
+.payment-option select *  {
+    font-size: 20px;
+    height: 30px;
+}
+
+/* ifCard */
+.ifCard {
+    display: none;
+}
+.ifCard .holder {
+    margin: 10px 0;
+}
+.ifCard .holder input{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.ifCard .cvc {
+    display: flex;
+    gap: 20px;
+}
+.ifCard .cvc input{
+    width: 50%;
+    height: 35px;
+    padding-left: 5px;
+}
+/* ifCard */
+
+/* payment-option */
+
+.checkout-body form .place-order {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.place-order .p-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.place-order .payment .image {
+    width: 100%;
+    height: 100%;
+    padding: 5px 0;
+}
+.place-order .payment .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.checkout-body form .place-order .payment {
+    width: 100%;
+    height: 200px;
+}
+
+.CsubTotal {
+    margin-top: 10px;
+}
+.CsubTotal div {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 20px;
+}
+.CsubTotal div span {
+    font-size: 19px;
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 1.5px;
+}
+.cTotalAmmount {
+    border-top: 1px solid gray;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 1.5px;
+}
+.cButtons {
+    display: flex;
+    margin: 10px 0;    
+    gap: 10px;
+    padding: 10px;
+}
+.cButtons button {
+    width: 50%;
+    height: 35px;
+}
+
+
+/*  */
+.placeloading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+}
+
+/* .loader */
+
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+  }
+
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: #102C57;
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #F11A7B;
+    box-shadow: 30px 0 0 #fff;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #ff3d00;
+    }
+    50% {
+      box-shadow: 0 0 0 #ff3d00;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #ff3d00;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 red;
+    }
+    50% {
+      box-shadow: 0 0 0 red;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 red;
+      margin-top: 0;
+    }
+  }
+  

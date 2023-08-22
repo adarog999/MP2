@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Titan+One&family=Work+Sans&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../images/login-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
+}
+.login-banner {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.login-banner img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.form-container .logo{
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.form-container .header {
+    text-align: center;
+}
+.form-container .header h1 {
+    font-family: "Titan One",cursive;
+    letter-spacing: 1.5px;
+    color: #246AF4;
+}
+.form-container .header p {
+    font-family: 'Poppins',sans-serif;
+    opacity: .8;
+    letter-spacing: 1.5px;
+}
+.form-container .inputs {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    gap: 10px;
+    flex-direction: column;
+}
+.form-container .inputs div{
+    position: relative;
+    margin-top: 20px;
+}
+.form-container .inputs div label {
+    position: absolute;
+    display: inline-block;
+    letter-spacing: 1.5px;
+    left: 10px;
+    bottom: 10px;
+    font-size: 17px;
+    pointer-events: none;
+    background-color: #fff;
+    transform: translateY(-110%);
+    left: 0;
+    font-family: 'Open sans',sans-serif;
+}
+.form-container .inputs div  input {
+        height: 50px;
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        padding-top: 20px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #246AF4;
+}
+
+.form-container .or {
+    padding: 0;
+    margin: -10px;
+}
+.login-options  {
+    display: flex;
+    column-gap: 20px;
+}
+.login-options button {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    border: none;
+}
+.login-options button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.form-container .signinBtn {
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid #246AF4;
+    padding: 7px;
+    border-radius: 20px;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #246AF4;
+    cursor: pointer;
+}
+.form-container .signinBtn:hover {
+    background-color: black;
+    color: #fff;
+}
+.form-container .no-account {
+    display: flex;
+    gap: 10px;
+}

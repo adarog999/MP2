@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../assets/css/cart.css">
+    <script src="https://kit.fontawesome.com/f9adae9806.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/cart.js" defer></script>
+</head>
+<body>
+       <!-- Nav -->
+       <nav class="navSection">
+        <div class="navBrand">
+        <h1>The Goods Goods</h1>
+        <span>EST.2023</span>
+        </div>  
+        <ul>
+            <li><a href="#">Home +</a></li>
+            <li><a href="#">Sell with Us +</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Resources +</a></li>
+        </ul>
+        <div class="search">
+            <label for="searchDropdown"></label>
+            <select name="dropdown" id="searchDropdown"></select>
+            <form action="">
+              <input id="search" type="search">
+            </form>
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="navIconProfile">
+            <button>
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+
+    <section class="cart-container">
+        <div class="header">
+
+        </div>
+        <div id="allCartDiv" class="allcart">
+
+        <div class="container">
+            <div class="loadings">
+                <span class="loader"></span>
+            </div>
+    </div>
+        <div class="change-varie-container">
+
+        </div>
+    </section>
+    <section class="cart-total">
+        <div class="div">
+            <div>
+                <span>Item</span>
+                <span id="itemCount" class="itemCount">(4)</span>
+            </div>
+            <div>
+                <span>Subtotal</span>
+                <span id="subtotal">950 PHP</span>
+            </div>
+            <div>
+                <span>Shipping Charge</span>
+                <span>50 PHP</span>
+            </div>
+            <div>
+                <span>Total Ammount</span>
+                <span id="totalAmmount">900</span>
+            </div>
+            <button id="checkout">CHECKOUT</button>
+        </div>
+    </section>
+    <div class="checkout-container">
+        <img class="bg-img" src="../assets/images/body-bg-1.png" alt="">
+            <div class="checkout-body">
+                <div class="placeOrder-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>PLACE ORDER SUCCESS</h2>
+                  </div>
+                <div class="head">
+                    <h2>CHECKOUT</h2>
+                </div>
+                <form action="">
+                        <div class="client-info">
+                            <div class="form-validation">
+                                <div class="">
+                                  <i class="fa-solid fa-circle-exclamation"></i>
+                                  <span class="message">PLEASE INPUT VALID CONTACT NUMBER</span>
+                                  <i class="fa-solid fa-rectangle-xmark" id="close"></i>
+                                </div>
+                              </div>
+                            <div class="names">
+                                <div>
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" required>
+                                </div>
+                                <div>
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="contact">
+                                <label for="contactNumber">Contact Number</label>
+                                <input type="text" id="contactNumber" maxlength="11" required>
+                            </div>
+                            <div class="address">
+                                <div class="loading">
+                                    <span class="loader"></span>
+                                </div>
+                                <span class="head">Address</span>
+                                <div class="address-option">
+                                <select name="" class="" id="island" required>
+                                    <option data-island="island" value="">Island</option>
+                                    <option value="luzon" >Luzon</option>
+                                    <option value="visayas">Visayas</option>
+                                    <option value="mindanao">Mindanao</option>
+                                </select>
+                                <select id="region" name="" id="" required>
+                                    <option value="">Region</option>
+                                </select>
+                                <select class="address" name="" id="province" required>
+                                    <option data-city="city" value="">Province</option>
+                                </select>
+                                <select class="address" name="" id="city" required>
+                                    <option data-barangay="barangay" value="">City</option>
+                                </select>
+                                <select class="address" name="" id="barangay" required>
+                                    <option data-barangay="barangay" value="">Barangay</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="payment-option">
+                                <span>Choose Payment Method:</span>
+                                <select name="" id="selectPayments">
+                                <option value="cod" class="">
+                                 CASH ON DELIVERY
+                                </option>
+                                <option value="mastercard" class="">
+                                  MASTERCARD
+                                </option>
+                                <option value="ae" class="">
+                                   AMERICAN EXPRESS
+                                </option>
+                                <option value="paypal" class="">
+                                   PAYPAL
+                                </option>
+                            </select>
+                            </div>
+                            
+                            <div class="ifCard">
+                                
+                            </div>
+                         
+                        </div>
+
+
+                        <div class="place-order">
+                            <div id="paymentImg" class="payment">
+                                <div class="p-method">
+                                    <h1>CASH ON DELIVRY</h1>
+                                    <p>HAVE A NICE DAY!</p>
+                                    <p>ADVANCE THANK YOU! FOR ORDERING HERE</p>
+                                </div>
+                            </div>
+                            <div class="CsubTotal">
+                                <div>
+                                    <span>SUBTOTAL</span> <span id="orderSubtotal">250 PHP</span>
+                                </div>
+                                <div>
+                                    <span>CHARGE</span>:
+                                    <span>0.00 PHP</span>
+                                </div>
+                            </div>
+                            <div class="cTotalAmmount">
+                                <span>TOTAL AMMOUNT</span>
+                                <span id="orederTotal">209 PHP</span>
+                            </div>
+                            <div class="cButtons">
+                                <button id="cancel_checkout" type="button">CANCEL</button>
+                                <button id="placeOrderBtn">PLACE ORDER</button>
+                            </div>
+                        </div>
+                       
+                </form>
+
+               
+            </div>
+    </div>
+        <!-- loading place order -->
+        <div class="placeloading">
+            <span class="loader"></span>
+            <p>redirecting ...</p>
+        </div>
+          <!-- loading place order -->
+</body>
+</html>

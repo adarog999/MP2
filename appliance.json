@@ -1,0 +1,112 @@
+{
+    "appliance": [
+        {
+            "id": 20,
+            "image": "../images/products-appliances/COFFEE-maker/COFFEE-maker.jpg",
+            "title": "Coffee Maker",
+            "price": 400,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "black"
+            }]
+        },
+        {
+            "id": 21,
+            "image": "../images/products-appliances/ELECTRIC-fan/ELECTRIC-fan.jpg",
+            "title": "Electric fan",
+            "price": 250,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "black"
+            }]
+        },
+        {
+            "id": 22,
+            "image": "../images/products-appliances/KITCHEN-exhaust/KITCHEN-exhaust.jpg",
+            "title": "Kitchen Exhaust",
+            "price": 450,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "gray"
+            }]
+        },
+        {
+            "id": 23,
+            "image": "../images/products-appliances/PANASONIC-refrigerator/PANASONIC-refrigerator1.jpg",
+            "title": "Panasonic Refrigerator - Inverter",
+            "price": 1200,
+            "images": "['../images/products-appliances/PANASONIC-refrigerator/PANASONIC-refrigerator2.jpg','../images/products-appliances/PANASONIC-refrigerator/PANASONIC-refrigerator3.jpg']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "black"
+            }]
+        },
+        {
+            "id": 24,
+            "image": "../images/products-appliances/SAMSUNG-airconditioner/SAMSUNG-aircon.jpg",
+            "title": "Samsung Airconditioner",
+            "price": 1200,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "white"
+            }]
+        },
+        {
+            "id": 25,
+            "image": "../images/products-appliances/SAMSUNG-tv/SAMSUNG-tv.jpg",
+            "title": "Samsung Flat Screen TV",
+            "price": 450,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "black"
+            }]
+        },
+        {
+            "id": 26,
+            "image": "../images/products-appliances/SAMSUNG-washingmachine/SAMSUNG-washingmachine.jpg",
+            "title": "Samsung Washing Machine",
+            "price": 650,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "black"
+            }]
+        },
+        {
+            "id": 27,
+            "image": "../images/products-appliances/STOVE/STOVE.jpeg",
+            "title": "American Stove",
+            "price": 700,
+            "images": "['']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "gray"
+            }]
+        },
+        {
+            "id": 28,
+            "image": "../images/products-appliances/VACUUM-cleaner/VACUUM-cleaner1.jpeg",
+            "title": "Vacuum Cleaner",
+            "price": 250,
+            "images": "['../images/products-appliances/VACUUM-cleaner/VACUUM-cleaner2.jpeg']",
+            "available": "true",
+            "quantity": 5,
+            "variants": [{
+                "colors": "black"
+            }]
+        }
+    ]
+}
