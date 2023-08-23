@@ -19,11 +19,10 @@
   <span>EST.2023</span>
   </div>  
   <ul>
-      <li><a href="index.html">Home </a></li>
-      <li><a href="#">Sell with Us </a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="#">Company</a></li>
-      <li><a href="#">Resources </a></li>
+    <li><a href="index.html">Home </a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="#">Company</a></li>
+      <li><a href="#">Resources </a></li> 
   </ul>
   <div class="search">
       <form action="">
@@ -120,11 +119,12 @@
             <input id="quantityVal" type="number" value="1" min="1" oninput="updateQuantity(this)">
             <button id="addQuant">+</button>
           </div>
+          <div class="errorAdd">
+            <span id="errorMessage"></span>
+            <i id="close" class="fa-solid fa-xmark"></i>
+          </div>
           <div class="buy-cart">
-            <div class="errorAdd">
-              <span id="errorMessage"></span>
-              <i id="close" class="fa-solid fa-xmark"></i>
-            </div>
+          
             <button class="addtocart"><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</button>
             <button class="buynow"><i class="fa-solid fa-tag"></i>BUY NOW</button>
           </div>
@@ -132,7 +132,7 @@
     </section>
 
     <div class="checkout-container">
-      <img class="bg-img" src="../assets/images/body-bg-1.png" alt="">
+      <img class="bg-img" src="./assets/images/body-bg-1.png" alt="">
           <div class="checkout-body">
             <div class="placeOrder-success">
               <i class="fa-solid fa-circle-check"></i>
@@ -171,18 +171,22 @@
                               <span class="head">Address</span>
                               <div class="address-option">
                               <select name="" class="" id="island" required>
-                                  <option data-island="island" value="">SELECT Island</option>
+                                  <option data-island="island" value="">Select Island</option>
                                   <option value="luzon" >Luzon</option>
                                   <option value="visayas">Visayas</option>
                                   <option value="mindanao">Mindanao</option>
                               </select>
                               <select id="region" name="" id="" required>
+                                <option value="" >Wait</option>
                               </select>
                               <select class="address" name="" id="province" required>
+                                <option value="" >Wait</option>
                               </select>
                               <select class="address" name="" id="city" required>
+                                <option value="" >Wait</option>
                               </select>
                               <select class="address" name="" id="barangay" required>
+                                <option value="" >Wait</option>
                               </select>
                               </div>
                           </div>
@@ -246,18 +250,9 @@
   </div>
   
   <section class="recommendations">
-    <h1>Recommendations</h1>
+    <h3>Recommendations</h3>
     <div class="images-containers">
-      <div class="product-wrap">
-          <div class="img">
-          <img src="./assets/images/seller-profile.png" alt="">
-          </div>
-          <div class="details">
-            <span class="names">Name</span>
-            <span class="prices">901.00 PHP</span>
-            <a href="">View Product</a>
-          </div>
-      </div>
+     
       <div class="product-wrap">
         <div class="img">
         <img src="./assets/images/seller-profile.png" alt="">
@@ -322,7 +317,7 @@
     <section class="img-fullview">
       <div class="img">
         <h1 id="close-view">&times;</h1>
-        <img class="image-fullV" src="../assets/images/sign-up-banner.jpg" alt="">
+        <img class="image-fullV" src="./assets/images/sign-up-banner.jpg" alt="">
       </div>
     </section>
   

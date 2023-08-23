@@ -95,7 +95,7 @@ fetch("https://adarog999.github.io/MP2/assets/json/products.json")
     console.log(object)
     const {title,price,image,images,variants} = object
     cartObject.price = price
-    prPrice.innerHTML = `${price}.00 PHP`
+    prPrice.innerHTML = `${price.toLocaleString("en-US")}.00 PHP`
     // console.log(variants)
     let btn = ''
 
@@ -160,7 +160,6 @@ fetch("https://adarog999.github.io/MP2/assets/json/products.json")
 }).then(reco => {
     let tags = reco.tags
     getRecommendations(tags) 
-    console.log(reco)
 })
 let imagesContainers = document.querySelector(".images-containers") 
 function getRecommendations(tags) {
@@ -197,9 +196,9 @@ function getRecommendations(tags) {
             <img src="${x.image}" alt="">
             </div>
             <div class="details">
-              <span class="names">Name</span>
-              <span class="prices">${x.price} PHP</span>
-              <a href="">View Product</a>
+              <span class="names">${x.title.slice(0,15)}...</span>
+              <span class="prices">${x.price.toLocaleString("en-US")}.00 PHP</span>
+              <a onclick="reload('${id}')" href="#/${x.id}">View Product</a>
             </div>
         </div>
             `
@@ -207,6 +206,14 @@ function getRecommendations(tags) {
         imagesContainers.innerHTML = arr
     })
 }
+
+function reload(id) {
+    location.replace(`http://127.0.0.1:5500/product-view.html#/${id}`)
+    setTimeout(()=> {
+        location.reload()
+        },100)
+}
+
 function imgView (src) {
     imgFullview.style.display = 'flex'
     imageFullV.src = src
@@ -238,6 +245,7 @@ addQuant.addEventListener("click",()=> {
     let quantityVal = document.getElementById("quantityVal")
     let value = parseInt(quantityVal.value)
     quantityVal.value = value+1
+    cartObject.quantity = quantityVal.value
 })
 let errorMessage = document.getElementById("errorMessage")
 let close = document.getElementById("close")
@@ -287,7 +295,7 @@ addToCart.addEventListener("click",() =>
         localStorage.setItem("cart",JSON.stringify(cart))
         cartAdded.style.display = 'flex'
     setTimeout(()=> {
-    cartAdded.style.display = 'none'
+        cartAdded.style.display = 'none'
     },1500)
          return
     } ;
@@ -304,6 +312,7 @@ addToCart.addEventListener("click",() =>
 let orederTotal = document.getElementById("orederTotal")
 let orderSubtotal = document.getElementById("orderSubtotal")
 buyNow.addEventListener("click",() => {
+    console.log(cartObject["quantity"],'asd')
     let isLogin = localStorage.getItem("isLogin") || false;
     console.log(isLogin)
     if(isLogin == false || isLogin == "false") {
@@ -326,7 +335,7 @@ buyNow.addEventListener("click",() => {
     } else if(isInCart !== undefined && isInCart !== -1){
         checkoutContainer.style.display = "flex"
         errorAdd.style.display = 'none'
-        orederTotal.innerHTML = `${((parseInt(cartObject["quantity"]) * cartObject.price) - 15).toLocaleString("en-US")}.00 PHP`
+        orederTotal.innerHTML = `${((parseInt(cartObject["quantity"]) * cartObject.price) + 15).toLocaleString("en-US")}.00 PHP`
         orderSubtotal.innerHTML = `${(parseInt(cartObject["quantity"]) * cartObject.price).toLocaleString("en-US")}.00 PHP`
     } else {
         checkoutContainer.style.display = "flex"
@@ -589,12 +598,10 @@ let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
         } else if(contactNum.length < 11) {
             formValidation.style.display = "flex"
             message.innerHTML = "CONTACT NUMBER MUST BE EQUAL TO 11"
-            console.log("err2")
 
         } else if(contactNum.value.slice(0,2) !== "09") {
             formValidation.style.display = "flex"
             message.innerHTML = "INPUT A VALID CONTACT NUMBER"
-            console.log("err3")
         } else {
             let orderObj = {
                 firstName: "",

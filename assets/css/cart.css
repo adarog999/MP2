@@ -163,6 +163,7 @@ body {
 .menu i{
     font-size: 30px;
     cursor: pointer;
+    display: none;
 }
 /* NAVBAR ENDS HERE */
 .menuHelper {

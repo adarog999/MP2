@@ -162,7 +162,7 @@ body {
 
 /* passwordI */
 .form-container .passwordI {
-    border: 1px solid black;
+    border: 1px solid rgba(128, 128, 128, 0.073);
     position: relative;
 }
 .form-container .passwordI span {

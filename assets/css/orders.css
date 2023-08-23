@@ -158,6 +158,7 @@
 .menu i{
     font-size: 30px;
     cursor: pointer;
+    display: none;
 }
 
 /* noOrders */
@@ -199,6 +200,7 @@
     right: 0;
     transition: transform .3s;
     transform: translate(100%);
+    display: none;
 }
 .menu_container .closeMenu {
     position: absolute;
