@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Profile</title>
+    <link rel="stylesheet" href="assets/css/sellerProfile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="./assets/js/seller.js" defer></script>
+</head>
+<body>
+    <!-- Nav -->
+    
+    <nav class="navSection">
+        <div class="navBrand">
+        <h1>MADA/FLECKERS</h1>
+        <span>EST.2023</span>
+        </div>  
+        <ul>
+            <li><a href="#">Seller Center+</a></li>
+            <li><a href="#">Sell with Us +</a></li>
+            <li><a href="#">Notification+</a></li>
+            <li><a href="#">Help+</a></li>
+            <li><a href="#">Language+</a></li>
+            <li><span>Follow us on</span> </li>
+        </ul>
+    </nav>
+    
+<!-- SELLER PROFILE STARTS HERE -->
+    <div class="profile-container">
+        <div class="profile-picture">
+            <div class="picture-container">
+
+            </div>
+            <div class="seller-description">
+                <h2>John Doe</h2>
+                <p>Seller of various products</p>
+                <p>Contact: john.doe@example.com</p>
+                <p>Location: New York, USA</p>
+            </div>
+        </div>
+        <div class="profile1">
+            <p >Products: <span id="products"></span></p>
+            <p >Following:  <span id="following"></span></p>
+            <p>Chat Performance: <span id="chatPer"></span></p>
+        </div>
+        <div class="profile2">
+            <p>Followers: <span id="followers"></span></p>
+            <p>Rating: <span id="rating"></span></p>
+            <p>Joined: <span id="join"></span></p>
+        </div>
+    </div>
+<!-- SELLER PROFILE ENDS HERE -->
+
+<!-- PRODUCTS NAV STARTS HERE -->
+    <section class="pr-nav">
+        <div class="products-nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ALL PRODUCTS</a></li>
+                <li><a href="#">T-SHIRTS</a></li>
+                <li><a href="#">SHOES</a></li>
+            </ul>
+            
+        </div>
+        <p class="productsList-title">Your top products</p>
+    </section>
+<!-- PRODUCTS NAV ENDS HERE -->
+
+<!-- PRODUCTS LIST STARTS HERE -->
+    <div class="productsList-container">
+        
+        <div class="topProducts-container">
+            <!-- <div class="topProducts-card">
+                <div class="topProducts-picture">
+                    <img src="./assets/images/products-images/ADIDAS-ultraboost/ADIDAS-ultraboost1.jpg" alt="">
+                </div>
+                <div class="topProducts-description">
+                    
+                </div>
+            </div> -->
+          
+            <!-- <div class="topProducts-card">
+                <div class="topProducts-picture">
+                   
+                </div>
+                <div class="topProducts-description">
+                   
+                </div>
+            </div> -->
+            <!-- <div class="topProducts-card">
+                <div class="topProducts-picture">
+                    
+                </div>
+                <div class="topProducts-description">
+                    
+                </div>
+            </div> -->
+            <!-- <div class="topProducts-card">
+                <div class="topProducts-picture">
+
+                </div>
+                <div class="topProducts-description">
+                    
+                </div>
+            </div> -->
+        </div>
+
+        <!-- CAROUSEL STARTS HERE -->
+        <div class="carousel-container">
+            <div class="carousel-title">
+                <span>About Seller</span>
+            </div>
+            <div class="div2">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/images/bill-gates1.jpg" class="d-block w-100" alt="...">
+              </div>
+            
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="carousel-description">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, doloribus natus, esse harum alias aut quidem facere quis libero corporis culpa incidunt suscipit, debitis saepe maxime obcaecati necessitatibus eveniet? Fugiat?</p>
+          </div>
+        </div>
+
+        </div>
+       
+        <!-- CAROUSEL ENDS HERE -->
+
+        <!-- FOOTER STARTS HERE -->
+
+        <footer>
+            <div class="costumer-service">
+                <h4>COSTUMER SERVICE</h4>
+                <p>Help Centre</p>
+                <p>Payment Methods</p>
+                <p>Order Tracking</p>
+                <p>Return Refund</p>
+                <p>Contact Us</p>
+            </div>
+            <div class="payment">
+    
+                <div class="payment-choice">
+                    <span>PAYMENT</span>
+                    <img src="../assets/images/payment.png" alt="">
+                </div>
+                <div class="logistics">
+                    <span>LOGISTICS</span>
+                    <div>
+                        <img src="./assets/images/j&t.png" alt="">
+                        <img src="./assets/images/lalamove.png" alt="">
+                        <img src="./assets/images/2GO-Logo.png" alt="">
+                        <img src="./assets/images/." alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="follow-us">
+                <span>FOLLOW US</span>
+                <div>
+                    <a href="#">Facebook</a>
+                </div>
+                <div>
+                    <a href="#">Instagram</a>
+                </div>
+                <div>
+                    <a href="#">Twitter</a>
+                </div>
+                <div>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="app-download"> 
+                <span>APP DOWNLOAD</span>
+                <button>
+                    <img src="./assets/images/qr.png" alt="">
+                    <img src="./assets/images/app-store.png" alt="">
+                </button>
+            </div>
+        </footer>
+
+        <!-- FOOTER ENDS HERE -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

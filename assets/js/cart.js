@@ -1,8 +1,91 @@
 let allcart = document.getElementById("allCartDiv")
-let cartStorage = JSON.parse(localStorage.getItem("cart")) || none;
+let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
 let changeVarie = document.querySelector(".change-varie-container")
 let checkoutContainer = document.querySelector(".checkout-container")
 let placeOrderSuccess = document.querySelector(".placeOrder-success")
+let cartTotal = document.querySelector(".cart-total")
+
+let isLogin = localStorage.getItem("isLogin") || false
+let notLogin = document.querySelector(".notLogin")
+let navIconProfile = document.querySelector(".navIconProfile")
+let cartCount = document.querySelector(".cart-count")
+let orderLists = JSON.parse(localStorage.getItem("orderList")) || [];
+let orderCount = document.querySelector(".order-count")
+if(orderLists.length > 0) {
+    orderCount.style.display = "block"
+    orderCount.textContent = orderLists.length
+} else{
+    orderCount.style.display = "none"
+}
+function cartIcon() {
+    let carts = JSON.parse(localStorage.getItem("cart")) || [];
+if(carts.length > 0) {
+    cartCount.style.display = "block"
+    cartCount.textContent = carts.length
+} else {
+    cartCount.style.display = "none"
+}
+}
+cartIcon()
+if(isLogin == "true" || isLogin == true) {
+    notLogin.style.display = "none"
+    navIconProfile.style.display = "flex"
+} else {
+    notLogin.style.display = "flex"
+    navIconProfile.style.display = "none"
+}
+
+
+let openMenuBtn = document.querySelector(".openMenu")
+let menu_container  = document.querySelector(".menu_container")
+let closeMenu  = document.querySelector(".closeMenu")
+let menuHelper = document.querySelector(".menuHelper")
+openMenuBtn.addEventListener("click",()=> {
+    menu_container.style.transform = "translateX(0)"
+    menuHelper.style.display  = "block"
+})
+closeMenu.addEventListener("click",()=> {
+    menu_container.style.transform = "translateX(100%)"
+    menuHelper.style.display  = "none"
+})
+menuHelper.addEventListener("click",()=> {
+    menuHelper.style.display  = "none"
+    menu_container.style.transform = "translateX(100%)"
+})
+
+
+
+function isCart () {
+    let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
+    if(cartStorage.length < 1) {
+        allcart.innerHTML = `<div class="noItems">No Item in the Cart</div>` 
+        cartTotal.innerHTML = `
+        <div class="div">
+            <div>
+                <span>Item</span>
+                <span id="itemCount" class="itemCount">(0)</span>
+            </div>
+            <div>
+                <span>Subtotal</span>
+                <span id="subtotal">0 PHP</span>
+            </div>
+            <div>
+                <span>Shipping Charge</span>
+                <span>0 PHP</span>
+            </div>
+            <div>
+                <span>Total Ammount</span>
+                <span id="totalAmmount">0</span>
+            </div>
+            <button id="checkout">NO ITEMS IN THE CART</button>
+        </div>
+        `
+    } else{
+
+
+    }
+}
+
 const displayCart = async () => {
     const fetchData = await fetch("https://adarog999.github.io/MP2/assets/json/products.json")
     const res = await fetchData.json()
@@ -19,10 +102,16 @@ const displayCart = async () => {
         `
          <div class="container container${mainIndex}">
          <div class="header">
-             <div>Flecker Shop</div>
-             <button>Chat</button>
-             <button>View Shop</button>
-             <p>Unit Price: ${price}.00 PHP</p>
+             <div class="seller">
+                <div class="sellerP">
+                <div>
+                <i class="fa-solid fa-user"></i> Flecker Shop
+                </div>
+                </div>
+                <button ><i class="fa-brands fa-rocketchat"></i> Chat</button>
+                <button><i class="fa-solid fa-shop"></i>View Shop</button>
+                </div>
+             <p class="uPrice"><i class="fa-solid fa-ticket"></i> Unit Price: ${price.toLocaleString("en-US")}.00 PHP</p>
          </div>
          <div class="div-container">
 
@@ -48,6 +137,7 @@ const displayCart = async () => {
                 <button class="chngBtn" onclick="changeVarBtn('${mainIndex}')">Change</button>
                 </div>
                 <div class="changeVariants changeVar${mainIndex}">
+                 <span class="closeChange" onclick="closeChange(event)">&times;</span>
                 ${variants.map((varie,index) => {
                     return Object.entries(varie).map(([varieKey,varieVal]) => {
                         return `
@@ -77,17 +167,19 @@ const displayCart = async () => {
              <button onclick="removeCart('${mainIndex}','${myCart.productId}')">Remove</button>
          </div>
      </div>
-     <div>
-         <button>Free Shipping</button>
-     </div>
+ 
      </div>
          `
     })
     allcart.innerHTML = cartList
+    isCart ()
 }
 displayCart()
 
-
+function closeChange(e) {
+    e.target.parentNode.style.display = "none"
+    changeVarie.style.display = "none"
+}
 function choose(value,key,index,productId,mainIndex) {
     let findCart = cartStorage.find(x => x.productId == productId )
     let a = findCart.variants[index][key] = value
@@ -114,7 +206,6 @@ const changeVarBtn = (div) => {
     let openDiv = document.querySelector(`.changeVar${div}`)
     openDiv.style.display = 'block'
     changeVarie.style.display = "block"
-    console.log(div)
     divNum = div
 }
 
@@ -122,6 +213,7 @@ changeVarie.addEventListener("click",(e)=> {
     let openDiv = document.querySelector(`.changeVar${divNum}`)
     openDiv.style.display = "none"
     e.target.style.display = "none"
+    console.log("asdasd")
 })
 
 const changeQ = (e,product,index,price) => {
@@ -151,6 +243,7 @@ const removeCart = (index,remId) => {
     findDiv.remove()
     localStorage.setItem("cart",JSON.stringify(newCart))
     updateCheckout(newCart)
+    isCart()
 }
 
 const checkoutBtn = document.getElementById("checkout")

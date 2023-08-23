@@ -4,42 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORDERS</title>
-    <link rel="stylesheet" href="./assets/js/orders.js">
+    <link rel="stylesheet" href="./assets/css/orders.css">
     <script src="https://kit.fontawesome.com/f9adae9806.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/orders.js" defer></script>
+    <script src="./assets/js/orders.js" defer></script>
 </head>
 <body>
+    <!-- Nav -->
     <nav class="navSection">
         <div class="navBrand">
         <h1>MADA/FLECKERS</h1>
         <span>EST.2023</span>
         </div>  
         <ul>
-            <li><a href="#">Home +</a></li>
-            <li><a href="#">Sell with Us +</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="#">Home </a></li>
+            <li><a href="sign-up.html">Sell with Us </a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Company</a></li>
-            <li><a href="#">Resources +</a></li>
+            <li><a href="#">Resources </a></li>
         </ul>
         <div class="search">
-            <label for="searchDropdown"></label>
-            <select name="dropdown" id="searchDropdown"></select>
             <form action="">
-              <input id="search" type="search">
+                <input id="search_text" type="text">
+                <button id="search" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+           
         </div>
         <div class="navIconProfile">
-            <button>
+            <!-- <button>
                 <i class="fa-solid fa-user"></i>
+            </button> -->
+            <button class="cart">
+                <a href="cart.html">
+                <span class="cart-count">0</span>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+            </button>
+            <button class="order"><a href="orders.html"><i class="fa-solid fa-list"></i>
+                <span class="order-count">0</span></a>
+                </button>
+        </div>
+        <div class="notLogin">
+            <a href="sign-in.html">
+                <button class="login">Login</button>
+            </a>
+            <a href="sign-up.html">
+                <button class="signUp">Sign Up</button>
+            </a>
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars openMenu"></i>
+        </div>
+      </nav>
+    
+      <!--  -->
+      <div class="menuHelper"></div>
+      <div class="menu_container">
+          <i class="fa-solid fa-rectangle-xmark closeMenu"></i>
+          <div class="navBrand">
+              <h2>MADA/FLECKERS</h2>
+              <span>EST.2023</span>
+              </div>  
+          <div class="links">
+  
+          <a href="#">
+              <i class="fa-solid fa-house-user"></i>
+              <span>Home</span>
+          </a>
+          <a href="#">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Cart</span>
+          </a>
+          <a href="#">
+              <i class="fa-solid fa-list"></i>
+              <span>Orders</span>
+          </a>
+          <a href="#">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>Order History</span>
+          </a>
+      </div>
+  
+          <div class="btn">
+              <button class="log-out">Log-out<i class="fa-solid fa-right-from-bracket"></i></button>
+          </div>
+      </div>
+<!--  -->
+
+
+    <section class="header">
+        <h1>YOUR ORDERS <i class="fa-solid fa-truck-fast"></i></h1>
+    </section>
+
+    <div class="noOrders">
+        <h1>No Orders yet... <i class="fa-solid fa-hourglass-start"></i></h1>
+    </div>
+  
+    <section id="ordersList" class="orders-container">
+        <div class="loading">
+            <span class="loader"></span>
+           </div>
+    </section>
+
+
+    <footer>
+        <div class="costumer-service">
+            <span>COSTUMER SERVICE</span>
+            <p>Help Centre</p>
+            <p>Payment Methods</p>
+            <p>Order Tracking</p>
+            <p>Return Refund</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="payment">
+
+            <div class="payment-choice">
+                <span>PAYMENT</span>
+                <img src="./assets/images/payment.png" alt="">
+            </div>
+            <div class="logistics">
+                <span>LOGISTICS</span>
+                <div>
+                    <img src="./assets/images/j&t.png" alt="">
+                    <img src="./assets/images/Lalamove.png" alt="">
+                    <img src="./assets/images/2GO-Logo.png" alt="">
+                    <img src="./assets/images/." alt="">
+                </div>
+            </div>
+        </div>
+        <div class="follow-us">
+            <span>FOLLOW US</span>
+            <div>
+                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i> Twitter</a>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+        <div class="app-download"> 
+            <span>APP DOWNLOAD</span>
+            <button>
+                <img src="./assets/images/qr.png" alt="">
+                <img src="./assets/images/app-store.png" alt="">
             </button>
         </div>
-    </nav>
-
-    <section id="ordersList" class="orders-container">
-       
-    </section>
+    </footer>
 </body>
 </html>

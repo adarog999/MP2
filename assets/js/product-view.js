@@ -12,6 +12,39 @@ let star = document.querySelector(".star")
 let errorAdd = document.querySelector(".errorAdd")
 let prPrice  = document.getElementById("pr-price")
 // let cartObject = {productId:id,quantity:1}
+
+
+
+let isLogin = localStorage.getItem("isLogin") || false
+let notLogin = document.querySelector(".notLogin")
+let navIconProfile = document.querySelector(".navIconProfile")
+let cartCount = document.querySelector(".cart-count")
+let orderLists = JSON.parse(localStorage.getItem("orderList")) || [];
+let orderCount = document.querySelector(".order-count")
+if(orderLists.length > 0) {
+    orderCount.style.display = "block"
+    orderCount.textContent = orderLists.length
+} else{
+    orderCount.style.display = "none"
+}
+function cartIcon() {
+    let carts = JSON.parse(localStorage.getItem("cart")) || [];
+if(carts.length > 0) {
+    cartCount.style.display = "block"
+    cartCount.textContent = carts.length
+} else {
+    cartCount.style.display = "none"
+}
+}
+cartIcon()
+if(isLogin == "true" || isLogin == true) {
+    notLogin.style.display = "none"
+    navIconProfile.style.display = "flex"
+} else {
+    notLogin.style.display = "flex"
+    navIconProfile.style.display = "none"
+}
+
 let cartObject = {
     productId:id,
     quantity:1,
@@ -19,6 +52,24 @@ let cartObject = {
     variants:[]
 }
 let variantsChoice = [];
+
+// let openMenuBtn = document.querySelector(".openMenu")
+// let menu_container  = document.querySelector(".menu_container")
+// let closeMenu  = document.querySelector(".closeMenu")
+// let menuHelper = document.querySelector(".menuHelper")
+// openMenuBtn.addEventListener("click",()=> {
+//     menu_container.style.transform = "translateX(0)"
+//     menuHelper.style.display  = "block"
+// })
+// closeMenu.addEventListener("click",()=> {
+//     menu_container.style.transform = "translateX(100%)"
+//     menuHelper.style.display  = "none"
+// })
+// menuHelper.addEventListener("click",()=> {
+//     menuHelper.style.display  = "none"
+//     menu_container.style.transform = "translateX(100%)"
+// })
+
 
 
 // console.log(variantsChoice)
@@ -97,15 +148,65 @@ fetch("https://adarog999.github.io/MP2/assets/json/products.json")
       </div>
         `
     }).join("")
+
     
+    return object
 }).then(cartObj => {
     for(let i = 0 ; i < variantsChoice.length ; i ++) {
         cartObject.variants.push({[variantsChoice[i]]:""}) 
-        
     }
     productLoading.style.display = "none"
+    return cartObj
+}).then(reco => {
+    let tags = reco.tags
+    getRecommendations(tags) 
+    console.log(reco)
 })
+let imagesContainers = document.querySelector(".images-containers") 
+function getRecommendations(tags) {
+    fetch("https://adarog999.github.io/MP2/assets/json/products.json")
+    .then(res => res.json())
+    .then(data => {
+        let combinedArray = [];
 
+    for (let key in data) {
+        combinedArray = combinedArray.concat(data[key]);
+    }
+    let recommended = combinedArray.filter(x => {
+        return x.tags == tags
+    }) 
+    console.log(recommended)
+    // console.log(product.images)
+    return recommended
+    }).then(reco => {
+        console.log(reco)
+
+        let recom = reco
+        for (let i = recom.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = recom[i];
+            recom[i] = recom[j];
+            recom[j] = temp;
+          }
+        console.log(recom,'this123')
+        let arr = '' 
+        recom.forEach(x => {
+            arr += `
+            <div class="product-wrap">
+            <div class="img">
+            <img src="${x.image}" alt="">
+            </div>
+            <div class="details">
+              <span class="names">Name</span>
+              <span class="prices">${x.price} PHP</span>
+              <a href="">View Product</a>
+            </div>
+        </div>
+            `
+        })
+        imagesContainers.innerHTML = arr
+    })
+}
 function imgView (src) {
     imgFullview.style.display = 'flex'
     imageFullV.src = src
@@ -144,7 +245,11 @@ close.addEventListener("click",()=> {
     errorAdd.style.display = 'none'
 })
 let cartAdded = document.querySelector(".cart-added ")
-
+let needLogin = document.querySelector(".needLogin")
+let closeNeedLogin = document.querySelector(".closeNeedLogin")
+closeNeedLogin.addEventListener("click",()=> {
+    needLogin.style.display = 'none'
+})
 function fillall(params) {
     errorMessage.innerHTML = params
     errorAdd.style.display = 'flex'
@@ -152,6 +257,12 @@ function fillall(params) {
 
 addToCart.addEventListener("click",() => 
 {
+    let isLogin = localStorage.getItem("isLogin") || false;
+    console.log(isLogin)
+    if(isLogin == false || isLogin == "false") {
+        needLogin.style.display = 'flex'
+        return;
+    }
     let isInCart = cart.findIndex(x => {
         return x.productId == id
     })
@@ -182,6 +293,7 @@ addToCart.addEventListener("click",() =>
     } ;
     cart.push(cartObject)
     localStorage.setItem("cart",JSON.stringify(cart))
+    cartIcon()
     cartAdded.style.display = 'flex'
     setTimeout(()=> {
     cartAdded.style.display = 'none'
@@ -192,6 +304,12 @@ addToCart.addEventListener("click",() =>
 let orederTotal = document.getElementById("orederTotal")
 let orderSubtotal = document.getElementById("orderSubtotal")
 buyNow.addEventListener("click",() => {
+    let isLogin = localStorage.getItem("isLogin") || false;
+    console.log(isLogin)
+    if(isLogin == false || isLogin == "false") {
+        needLogin.style.display = 'flex'
+        return;
+    }
     let isInCart = cart.findIndex(x => {
         return x.productId == id
     })
@@ -216,6 +334,9 @@ buyNow.addEventListener("click",() => {
         orederTotal.innerHTML = `${((parseInt(cartObject["quantity"]) * cartObject.price) - 15).toLocaleString()}.00 PHP`
         orderSubtotal.innerHTML = `${(parseInt(cartObject["quantity"]) * cartObject.price).toLocaleString("en-US")}.00 PHP`
     };
+
+
+
 })
 // buynow
 
@@ -234,9 +355,7 @@ function varieBtn(variantVal,varName,index) {
     console.log(varName)
     for (let i = 0 ; i < cartObj.length ; i++) {
         let choiceBtn = document.querySelectorAll(`.${variantsChoice[i]}`)
-       
             let objKey = variantsChoice[i]
-          
             let key = cartObject.variants[i]
             console.log(cartObject.variants[i][variantsChoice[i]])
             for(let j = 0; j < choiceBtn.length ; j++) {
@@ -273,7 +392,7 @@ island.addEventListener("change", (e)=> {
             console.log(x.name)
             regions += `<option value="${x.code},${x.name}" >${x.name}</option>`
         })
-        region.innerHTML = regions
+        region.innerHTML = `<option value="">Select Region</option> ${regions}`
         loading.style.display = 'none'
         island.setAttribute("data",`name: '${value}'`)
     })
@@ -291,7 +410,7 @@ region.addEventListener("change",(e)=> {
             provinces += `
             <option value="${x.code},${x.name}">${x.name}</option>`
         })
-        province.innerHTML = provinces
+        province.innerHTML = `<option value="">Select Province</option> ${provinces}`
         loading.style.display = 'none'
     })
 })
@@ -309,7 +428,7 @@ province.addEventListener("change",(e)=> {
             cities += `<option value="${x.code},${x.name}">${x.name}</option>`
         })
 
-        city.innerHTML = cities
+        city.innerHTML = `<option value="">Select Cities</option> ${cities}`
         loading.style.display = 'none'
 
     })
@@ -327,7 +446,7 @@ city.addEventListener("change",(e)=> {
         data.forEach(x=> {
             barangays += `<option value="${x.code},${x.name}">${x.name}</option>`
         })
-        barangay.innerHTML = barangays
+        barangay.innerHTML = `<option value="">Select Cities</option> ${barangays}`
     loading.style.display = 'none'
     })
 })
@@ -477,6 +596,17 @@ let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
             message.innerHTML = "INPUT A VALID CONTACT NUMBER"
             console.log("err3")
         } else {
+            let orderObj = {
+                firstName: "",
+                lastName: "",
+                contactNum: "",
+                productId: id,
+                quantity:cartObject.quantity,
+                variants: cartObject.variants,
+                address:`${island.value} ${region.value.split(",")[1]} ${province.value.split(",")[1]} ${city.value.split(",")[1]} ${barangay.value.split(",")[1]}`
+                ,
+                paymentMehod:"",
+            }
         orderObj.firstName = firstName.value
         orderObj.lastName = lastName.value
         orderObj.contactNum = contactNum.value
@@ -508,3 +638,6 @@ let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
 function orderDetails() {
     
 }
+
+
+

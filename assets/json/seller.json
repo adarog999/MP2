@@ -1,0 +1,74 @@
+{
+    "seller": [
+        {   
+            "username" : "elunmusk69",
+            "password" : "elunmusk69",
+            "id": 0,
+            "image": "../assets/images/elon-musk.jpg",
+            "name": "Elon Musk",
+            "images": ["./assets/images/elon-musk.jpg","./assets/images/elon-musk1.jpg","./assets/images/elon-musk2.jpg"],
+            "products": "5",
+            "following": "0",
+            "chat_performance": "88%",
+            "followers": "1.5 M",
+            "rating": "5/5",
+            "joined": "23/08/2023"
+        },
+        {
+            "username" : "billgates69",
+            "password" : "billgates69",
+            "id": 1,
+            "image": "../assets/images/bill-gates1.jpg",
+            "name": "Bill Gates",
+            "images": ["./assets/images/bill-gates1.jpg","./assets/images/bill-gates2.jpeg","./assets/images/bill-gates3.jpg"],
+            "products": "5",
+            "following": "0",
+            "chat_performance": "95%",
+            "followers": "10.1 M",
+            "rating": "5/5",
+            "joined": "23/08/2023"
+        },
+        {
+            "username" : "jeffbezos69",
+            "password" : "jeffbezos69",
+            "id": 2,
+            "image": "../assets/images/jeff-bezos1.jpeg",
+            "name": "Jeff Bezos",
+            "images": ["./assets/images/jeff-bezos1.jpeg","./assets/images/jeff-bezos2.jpeg","./assets/images/jeff-bezos3.jpg"],
+            "products": "5",
+            "following": "5",
+            "chat_performance": "90%",
+            "followers": "1.2m",
+            "rating": "5/5",
+            "joined": "23/08/2023"
+        },
+        {
+            "username" : "kiyosaki69",
+            "password" : "kiyosaki69",
+            "id": 3,
+            "image": "../assets/images/robert-kiyosaki1.jpg",
+            "name": "Robert Kiyosaki",
+            "images": ["./assets/images/robert-kiyosaki1.jpg","./assets/images/robert-kiyosaki1.jpg","./assets/images/robert-kiyosaki1.jpg"],
+            "products": "5",
+            "following": "5",
+            "chat_performance": "98%",
+            "followers": "1.5m",
+            "rating": "5/5",
+            "joined": "23/08/2023"
+        },
+        {
+            "username" : "belfort69",
+            "password" : "belfort69",
+            "id": 4,
+            "image": "..assets/images/jordan-belfort1.jpg",
+            "name": "Jordan Belfort",
+            "images": ["./assets/images/jordan-belfort1.jpg","./assets/images/jordan-belfort2.jpg","./assets/images/jordan-belfort3.jpg"],
+            "products": "7",
+            "following": "5",
+            "chat_performance": "99%",
+            "followers": "1m",
+            "rating": "5/5",
+            "joined": "23/08/2023"
+        }
+    ]
+}
