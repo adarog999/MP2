@@ -311,6 +311,7 @@ addToCart.addEventListener("click",() =>
 // buynow
 let orederTotal = document.getElementById("orederTotal")
 let orderSubtotal = document.getElementById("orderSubtotal")
+
 buyNow.addEventListener("click",() => {
     console.log(cartObject["quantity"],'asd')
     let isLogin = localStorage.getItem("isLogin") || false;
@@ -555,16 +556,15 @@ let closeFormErr = document.querySelector(".form-validation #close")
 closeFormErr.addEventListener("click",()=> {
     formValidation.style.display = "none"
 })
+let youWant = document.querySelector(".youWant")
+
 confirmBuy.addEventListener("click",(e)=> {
     e.preventDefault()
 let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
     let isInOrder = orderList.find(x => {
         return parseInt(x.productId) == parseInt(orderObj.productId)
     })
-    if(isInOrder !== undefined) {
-        console.log("you want to order again?")
-        return
-    }
+   
         if(selectPayment.value !== 'cod') {
             // formValidation.style.display = "flex"
             // message.innerHTML = "COMPLETE CARD INFORMATION"
@@ -603,6 +603,11 @@ let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
             formValidation.style.display = "flex"
             message.innerHTML = "INPUT A VALID CONTACT NUMBER"
         } else {
+            if(isInOrder !== undefined) {
+                youWant.style.display = "block"
+                return
+            } else {
+
             let orderObj = {
                 firstName: "",
                 lastName: "",
@@ -638,6 +643,7 @@ let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
         },1300)
         }
 
+    }
 
 
 })
@@ -648,3 +654,56 @@ function orderDetails() {
 
 
 
+let logoutDiv = document.querySelector(".logoutDiv")
+let lgText = document.querySelector(".logoutDiv p")
+logoutDiv.addEventListener("click",()=> {
+    console.log("asd")
+    lgText.textContent = "Logging out.."
+    localStorage.setItem("isLogin",false)
+    localStorage.setItem("isLogout",true)
+    location.replace("signin.html")
+    
+})
+
+let yes = document.getElementById("yes")
+let no = document.getElementById("no")
+no.addEventListener("click",()=> {
+    youWant.style.display = "none"
+    checkoutContainer.style.display = "none"
+})
+yes.addEventListener("click",()=> {
+    let orderObj = {
+        firstName: "",
+        lastName: "",
+        contactNum: "",
+        productId: id,
+        quantity:cartObject.quantity,
+        variants: cartObject.variants,
+        address:`${island.value} ${region.value.split(",")[1]} ${province.value.split(",")[1]} ${city.value.split(",")[1]} ${barangay.value.split(",")[1]}`
+        ,
+        paymentMehod:"",
+    }
+orderObj.firstName = firstName.value
+orderObj.lastName = lastName.value
+orderObj.contactNum = contactNum.value
+orderObj.paymentMehod = selectPayment.value
+orderObj.quantity = cartObject.quantity
+orderList.push(orderObj)
+localStorage.setItem("orderList",JSON.stringify(orderList))
+placeOrderSuccess.style.display = "block"
+
+
+
+setTimeout(()=> {
+placeOrderSuccess.style.display = "none"
+productLoading.style.display = "flex"
+productLoading.style.position = "fixed"
+productLoading.style.maxHeight = "100vh"
+productLoading.style.maxWidth = "100vw"
+productLoading.style.top = "0"
+productLoading.style.left = "0"
+loaderMessage.style.display = "block"
+location.replace("orders.html")
+},1300)
+
+})

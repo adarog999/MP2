@@ -4,6 +4,13 @@ let password = document.querySelector("#password")
 let errorLogin = document.querySelector(".errorLogin")
 let errMessage = document.querySelector(".errMessage")
 let successSignUp = document.querySelector(".successSignUp")
+let isLogout = localStorage.getItem("isLogout")|| false;
+let successMessage = document.querySelector(".successMessage")
+if(isLogout == true || isLogout == "true") {
+    successSignUp.style.display = "flex"
+    successMessage.textContent = "You are now Logout"
+}
+
 let isSuccessSignUp = localStorage.getItem("isSuccess") || false;
 let successClose = document.querySelector(".successClose")
 if(isSuccessSignUp == true || isSuccessSignUp == "true") {
@@ -11,6 +18,7 @@ if(isSuccessSignUp == true || isSuccessSignUp == "true") {
 }
 successClose.addEventListener("click",()=> {
     localStorage.setItem("isSuccess",false)
+    localStorage.setItem("isLogout",false)
     successSignUp.style.display = "none"
 })
 signinBtn.addEventListener("click",(e)=> {

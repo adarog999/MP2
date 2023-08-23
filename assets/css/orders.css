@@ -155,6 +155,29 @@
     color: #fff;
     display: none;
 }
+.navIconProfile .logoutDiv {
+    border: 1px solid #FDD266;
+     display: flex; 
+     padding: 5px; border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 50px;
+
+}
+.navIconProfile .logoutDiv:hover {
+    background-color: #fff;
+}
+.navIconProfile .logoutDiv:active {
+    background-color: transparent;
+}
+.navIconProfile .logoutDiv p {
+    color: #FDD266;
+    letter-spacing: 1.5px;
+}
+.navIconProfile .logoutDiv i{
+    color: #FDD266;
+}
+
 .menu i{
     font-size: 30px;
     cursor: pointer;

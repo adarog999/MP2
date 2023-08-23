@@ -164,6 +164,29 @@ body {
     display: none;
 }
 
+.navIconProfile .logoutDiv {
+    border: 1px solid #FDD266; 
+    display: flex; 
+    padding: 5px; 
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    align-items: center;
+}
+.navIconProfile .logoutDiv:hover {
+    background-color: #fff;
+}
+.navIconProfile .logoutDiv:active {
+    background-color: transparent;
+}
+.navIconProfile .logoutDiv p {
+    color: #FDD266;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+.navIconProfile .logoutDiv i{
+    color: #FDD266;
+}
 .menu i{
     font-size: 30px;
     cursor: pointer;
@@ -981,6 +1004,58 @@ body {
 }
 /* recommendations */
 
+.youWant {
+    width: 100%;
+    max-width: 400px;
+    height: max-content;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #DF2E38;
+    inset: 0;
+    margin: auto;
+    z-index: 5;
+    display: none;
+}
+.youWant .btn{
+    display: flex;
+    gap: 10px;
+}
+.youWant .btn button {
+    width: 50%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+.youWant .btn #yes {
+    border: 2px solid rgb(27, 175, 27);
+    color: rgb(27, 175, 27);
+}
+.youWant .btn #yes:hover {
+    color: #fff;
+    background-color: rgb(27, 175, 27);
+}
+.youWant .btn #yes:active {
+    background-color: #fff;
+    color: rgb(27, 175, 27);
+    border: 2px solid rgb(27, 175, 27);
+}
+.youWant .btn #no {
+    border: 2px solid #322653;
+    color: #322653;
+}
+.youWant .btn #no:hover {
+    background-color: #322653;
+    color: #fff;
+}
+.youWant .btn #no:active {
+    background-color: #fff;
+    color: #322653;
+    border: 2px solid #322653;
+}
 .loader {
     animation: rotate 1s infinite;
     height: 50px;

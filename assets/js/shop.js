@@ -218,3 +218,14 @@ function searchInput(inp) {
     const words = inp.split("-")
     return words.join(" ")
 }
+
+let logoutDiv = document.querySelector(".logoutDiv")
+let lgText = document.querySelector(".logoutDiv p")
+logoutDiv.addEventListener("click",()=> {
+    console.log("asd")
+    lgText.textContent = "Logging out.."
+    localStorage.setItem("isLogin",false)
+    localStorage.setItem("isLogout",true)
+    location.replace("signin.html")
+    
+})

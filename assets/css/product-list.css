@@ -61,11 +61,12 @@ body {
     font-size: 15px;
     color: white;
 }
+
 .navSection ul li::after {
     display: block;
     content: "";
     height: 1px;
-    background-color: orangered;
+    background-color: #fff;
     transform: scaleX(0);
     transition: 0.6s ease;
 }
@@ -135,6 +136,8 @@ body {
     display: flex;
     gap: 20px;
     display: none;
+    align-items: center;
+    position: relative;
 }
 .navIconProfile button {
     border: none;
@@ -160,6 +163,26 @@ body {
     border-radius: 5px;
     color: #fff;
     display: none;
+}
+
+.navIconProfile .logoutDiv {
+    border: 1px solid #FDD266; display: flex; padding: 5px; border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.navIconProfile .logoutDiv:hover {
+    background-color: #fff;
+}
+.navIconProfile .logoutDiv:active {
+    background-color: transparent;
+}
+.navIconProfile .logoutDiv p {
+    color: #FDD266;
+    letter-spacing: 1.5px;
+}
+.navIconProfile .logoutDiv i{
+    color: #FDD266;
 }
 .menu i{
     font-size: 30px;

@@ -58,6 +58,7 @@ menuHelper.addEventListener("click",()=> {
 function isCart () {
     let cartStorage = JSON.parse(localStorage.getItem("cart")) || [];
     if(cartStorage.length < 1) {
+        cartCount.style.display = "none"
         allcart.innerHTML = `<div class="noItems">No Item in the Cart</div>` 
         cartTotal.innerHTML = `
         <div class="div">
@@ -155,9 +156,10 @@ const displayCart = async () => {
                 </div>
                 </div>
          <div class="div4">
-             <div>   
-                
-                 <input oninput="changeQ(event,'${myCart.productId}',${mainIndex},'${price}')" min="1" value="${myCart.quantity}" type="number">
+             <div style="display: flex; margin-left: 10px; ">   
+                <button style="cursor:pointer; z-index: 1;" onclick="minusQuant(event,'${myCart.productId}',${mainIndex},'${price}','${myCart.productId}')">-</button>
+                 <input oninput="changeQ(event,'${myCart.productId}',${mainIndex},'${price}')" min="1" value="${myCart.quantity}" class="input${myCart.productId}"  type="number">
+                <button style="cursor:pointer; z-index: 1;" onclick="plusQuant(event,'${myCart.productId}',${mainIndex},'${price}','${myCart.productId}')" >+</button>
              </div>
          </div>
          <div class="div5">
@@ -232,6 +234,38 @@ const changeQ = (e,product,index,price) => {
     updateCheckout(cartStorage)
     
 }
+
+function minusQuant(e,product,index,price,inp) {
+    console.log("asd")
+    let valueInp = document.querySelector(`.input${inp}`) 
+    let {value} = valueInp
+    if(parseInt(value) == 1) {
+        return
+    }
+    console.log(value)
+    valueInp.value = parseInt(value) - 1
+    console.log(value,'asd')
+    let findCart = cartStorage.find(x => x.productId == product )
+    findCart.quantity =  valueInp.value
+    let changePrice = document.querySelector(`.price${index}`)
+    changePrice.textContent = `${(parseInt(price) * parseInt( valueInp.value)).toLocaleString()}`
+    localStorage.setItem("cart",JSON.stringify(cartStorage))
+    updateCheckout(cartStorage)
+}
+function plusQuant(e,product,index,price,inp) {
+    console.log("asd")
+    let valueInp = document.querySelector(`.input${inp}`) 
+    let {value} = valueInp
+    console.log(value)
+    valueInp.value = parseInt(value) + 1
+    console.log(value,'asd')
+    let findCart = cartStorage.find(x => x.productId == product )
+    findCart.quantity =  valueInp.value
+    let changePrice = document.querySelector(`.price${index}`)
+    changePrice.textContent = `${(parseInt(price) * parseInt( valueInp.value)).toLocaleString()}`
+    localStorage.setItem("cart",JSON.stringify(cartStorage))
+    updateCheckout(cartStorage)
+}
 const removeCart = (index,remId) => {
     let findDiv = document.querySelector(`.container${index}`)
     let carts = JSON.parse(localStorage.getItem("cart"))
@@ -244,6 +278,7 @@ const removeCart = (index,remId) => {
     localStorage.setItem("cart",JSON.stringify(newCart))
     updateCheckout(newCart)
     isCart()
+    cartCount.textContent = newCart.length
 }
 
 const checkoutBtn = document.getElementById("checkout")
@@ -522,3 +557,13 @@ let orderList = JSON.parse(localStorage.getItem("orderList")) || [];
 
 // placeOrderBtn.addEventListener("click",(e)=> {
 // })
+
+let logoutDiv = document.querySelector(".logoutDiv")
+let lgText = document.querySelector(".logoutDiv p")
+logoutDiv.addEventListener("click",()=> {
+    console.log("asd")
+    lgText.textContent = "Logging out.."
+    localStorage.setItem("isLogin",false)
+    localStorage.setItem("isLogout",true)
+    location.replace("sign-in.html")
+})
