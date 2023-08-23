@@ -226,6 +226,5 @@ logoutDiv.addEventListener("click",()=> {
     lgText.textContent = "Logging out.."
     localStorage.setItem("isLogin",false)
     localStorage.setItem("isLogout",true)
-    location.replace("signin.html")
-    
+    location.replace("sign-in.html")
 })
