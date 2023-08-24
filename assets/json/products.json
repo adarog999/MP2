@@ -275,7 +275,7 @@
             "image": "./assets/images/products-images/VANS-atwood/VANS-atwood1.jpg",
             "title": "",
             "price": 350,
-            "images": "['./assets/images/products-images/VANS-atwood/VANS-atwood2.jpg','./assets/images/products-images/VANS-atwood/VANS-atwood3.jpg','./assets/images/products-images/VANS-atwood/VANS-atwood4.jpg','./assets/images/products-images/VANS-atwood/VANS-atwood5.jpg']",
+            "images": ["./assets/images/products-images/VANS-atwood/VANS-atwood2.jpg","./assets/images/products-images/VANS-atwood/VANS-atwood3.jpg","./assets/images/products-images/VANS-atwood/VANS-atwood4.jpg","./assets/images/products-images/VANS-atwood/VANS-atwood5.jpg"],
             "available": "true",
             "quantity": 10,
             "variants": [{

@@ -163,7 +163,7 @@ seeMore.addEventListener("click",async (e) => {
             <img src="${image}" alt="">
         </div>
         <p class="title">${title.slice(0,20)} ${title.length > 15 ? `<a href="product-view.html#/${id}">...</a>` : ''}</p>
-    <p class="price">${price}.00</p>
+    <p class="price">${price}.00 PHP</p>
     <a class="view-btn" href="product-view.html#/${id}">View Product</a>
     </div>
     `

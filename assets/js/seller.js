@@ -46,13 +46,19 @@ let followers = document.getElementById("followers")
 let rating = document.getElementById("rating")
 let join = document.getElementById("join")
 let carouselInner = document.querySelector(".carousel-inner")
-fetch("http://127.0.0.1:5500/assets/json/seller.json")
+let sellerName = document.querySelector(".sellerName")
+let email = document.querySelector(".email")
+
+fetch("https://adarog999.github.io/MP2/assets/json/seller.json")
+
 .then(res => res.json())
 .then(data => {
     console.log(data)
     let sellerList = data.seller
+    let selllerAcc = JSON.parse(localStorage.getItem("selllerAcc")) 
+    console.log(selllerAcc)
     let seller = sellerList.find(x => {
-        return x.username == "belfort69" && x.password == "belfort69"
+        return x.username == selllerAcc.username && x.password == selllerAcc.password
     })
     if(seller !== undefined) {
        products.textContent = seller.products
@@ -61,6 +67,8 @@ fetch("http://127.0.0.1:5500/assets/json/seller.json")
        followers.textContent = seller.followers
        rating.textContent = seller.rating
        join.textContent = seller.joined
+       sellerName.textContent = seller.name
+       email.textContent = seller.username
     }
     let sellerImg = ""
     seller.images.forEach(x => {

@@ -4,13 +4,20 @@ let password = document.querySelector("#password")
 let errorLogin = document.querySelector(".errorLogin")
 let errMessage = document.querySelector(".errMessage")
 let successSignUp = document.querySelector(".successSignUp")
+let allSeller = []
+const seller = async ()=>{
+    let fetchData = await fetch("https://adarog999.github.io/MP2/assets/json/seller.json")
+    let resp = await fetchData.json()
+    allSeller = resp.seller
+}
+seller()
+
 let isLogout = localStorage.getItem("isLogout")|| false;
 let successMessage = document.querySelector(".successMessage")
 if(isLogout == true || isLogout == "true") {
     successSignUp.style.display = "flex"
     successMessage.textContent = "You are now Logout"
 }
-
 let isSuccessSignUp = localStorage.getItem("isSuccess") || false;
 let successClose = document.querySelector(".successClose")
 if(isSuccessSignUp == true || isSuccessSignUp == "true") {
@@ -22,6 +29,16 @@ successClose.addEventListener("click",()=> {
     successSignUp.style.display = "none"
 })
 signinBtn.addEventListener("click",(e)=> {
+    let findSeller = allSeller.find(x => {
+        return x.username == username.value && x.password == password.value
+    })
+    console.log(findSeller)
+    if(findSeller !== undefined && findSeller !== "undefined") {
+        e.preventDefault()
+        localStorage.setItem("selllerAcc",JSON.stringify(findSeller))
+        location.replace("sellerProfile.html")
+        return
+    }
     let isLogin = localStorage.getItem("isLogin") || false;
     let users = JSON.parse(localStorage.getItem("users")) || []
     e.preventDefault()
@@ -49,9 +66,7 @@ let closeErr = document.querySelector(".closeErr")
 closeErr.addEventListener("click",()=> {
     let errorLogin = document.querySelector(".errorLogin")
     errorLogin.style.display = "none"
-    console.log()
 })
-console.log(errorLogin)
 let showPass = document.querySelector(".showPass")
 let unShowPass = document.querySelector(".unShowPass")
 
